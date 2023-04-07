@@ -6,10 +6,13 @@ const app = express()
 const port = 3000
 require('dotenv').config()
 
+// PORT
+const PORT = process.env.PORT || 3000
+
 // STRING CONNECTION
 const MONGODB_URI = process.env.MONGODB_URI
 
-mongoose.connect(MONGODB_URI)
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
 
 // Database Connection Error / Success
 const db = mongoose.connection;
@@ -22,6 +25,7 @@ app.use(express.static('public'));
 
 // Middlewares
 app.use(express.urlencoded({ extended: false }))
+app.use(express.json())
 app.use(methodOverride('_method'))
 
 
