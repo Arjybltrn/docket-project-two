@@ -35,6 +35,4 @@ app.get('/',(req,res) => {
 })
 
 // Listener
-app.listen(port, () => {
-    console.log(`Listening on port: ${port}`)
-})
+    app.listen(PORT, () => console.log('express is listening on:', PORT));
