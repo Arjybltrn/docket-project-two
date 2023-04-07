@@ -20,18 +20,19 @@ db.on('error', (err) => console.log(err.message + ' is mongod not running?'));
 db.on('connected', () => console.log('mongo connected'));
 db.on('disconnected', () => console.log('mongo disconnected'));
 
-// Use publick folder for static assets
+// Use public folder for static assets
 app.use(express.static('public'));
 
 // Middlewares
 app.use(express.urlencoded({ extended: false }))
+
 app.use(express.json())
 app.use(methodOverride('_method'))
 
 
 // 
 app.get('/',(req,res) => {
-    res.send('Welcome to DOCKET')
+    res.render('index.ejs')
 })
 
 // Listener
