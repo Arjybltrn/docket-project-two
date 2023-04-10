@@ -9,20 +9,51 @@ body {
     padding: 10px;
 }
 .tdl-container {
-    display:inline-block;
-    justify-content: center;
-    padding: 10px;
- 
+margin: 0 auto; 
+border: solid 1px black;
+border-radius: 20px;
+padding-right: 40px;
+padding-bottom: 20px;
 }
 .tdl {
     display: inline-block;
 }
-.tdl-create {
-    display:flex;
-    justify-content: center;
-    width: 100%;
-    margin: inherit;
+.del, .edit {
+    width: 22px;
+    height: 22px;
+    transition: width 0.5s, height, 0.5s transform 0.1s;
 }
+.del:hover, .edit:hover {
+    transform: rotate(20deg);
+}
+label {
+    font-size: 20px;
+}
+.add-btn {
+    position:absolute;
+}
+.tdl-create > form {
+    justify-content: center;
+    margin: 0 auto;
+    height: 50px;
+    padding-left: 40px;
+    padding-right: 30px;
+}
+button, input[type="checkbox" i]{
+    cursor: pointer;
+}
+
+input[class="text-create"] {
+    padding: 10px;
+width: 240px;
+border-radius: 10px;
+}
+
+input[type="submit" i] {
+    width: 50px;
+    height: auto;
+}
+
 .radio_item_menu:checked~.item{
     font-weight: 300;
     text-decoration: line-through;
@@ -31,3 +62,5 @@ body {
         width: 80%;
         height: 30px;
   } */
+ 
+  

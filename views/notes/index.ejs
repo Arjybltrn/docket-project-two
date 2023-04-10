@@ -7,41 +7,44 @@
 
 
 <body>
-   <h1>DOCKET</h1>
+   <h1>docket.</h1>
 <div class="tdl-container">
 <ul>
     <% notes.forEach(note => { %>
+
             <div class="tdl checkbox">
-            <input type="checkbox" class="radio_item_menu"> <span class="item"><%=note.item%></span>
+            <input type="checkbox" class="radio_item_menu"> <label for="item" class="item"><%=note.item%></label>
             </div>
+
             <div class="tdl del"> 
                 <form action="/notes/<%=note._id %>?_method=DELETE" method="POST">
-                    <input type="submit" value="DELETE" />
+                   <button type="submit" style="border: 0; background: transparent">
+                     <img src="https://cdn-icons-png.flaticon.com/512/648/648415.png" width="20" height="20" alt="submit" />
+                    </button>
                 </form>
             </div>    
 
-            <div class="tdl edit">
-                <form id="edit" action="/notes/<%= note._id %>?_method=PUT" method="POST">
-                    <input type="text" name="item" value="<%= note.item%>">
-                    <input type="submit" value="Save" />
+            <div class="tdl edit"> 
+                   <button type="submit" style="border: 0; background: transparent">
+                     <img src="https://cdn-icons-png.flaticon.com/512/2280/2280532.png" width="20" height="20" alt="submit" />
+                </button>
                 </form>
-            </div>
+            </div>    
+
             <br />
     <%  }) %>
-   
+
 </ul>
+            <div class="tdl-create">
+                <form action="/notes" method="POST">
+                    <input class="text-create" type="text" name="item" placeholder="Write new item and hit 'Enter'">
+                    <button class="add-btn" type="submit" style="border: 0; background: transparent">
+                    <img src="https://cdn-icons-png.flaticon.com/512/10263/10263114.png" width="30" height="30" alt="submit" />
+                   </button>
+                </form>
+            </div>
 </div>
-    <div class="tdl-create">
-        <form action="/notes" method="POST">
-            <input type="text" name="item" placeholder="Write new item and hit 'Enter'">
-            <input type="submit" value="+" />
-        </form>
-    </div>
-
-
-
-
-
+            
 
 </body>
 

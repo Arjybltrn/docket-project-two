@@ -44,20 +44,10 @@ app.get('/', (req, res) => {
     app.listen(PORT, () => console.log('express is listening on:', PORT));
 
 
-// //   <button>
-// <a href="/notes/<%=note._id %>/edit" 
-// onclick="window.open('/notes/<%=note._id %>/edit',
-// 'newwindow',
-// 'width=300, height=250')
-// return false">Edit task</a></button>
 
-/* <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-green">Open Modal</button>
-
-<div id="id01" class="w3-modal">
-  <div class="w3-modal-content">
-    <div class="w3-container">
-      <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-      <p><%=note.item%> </p>
-    </div>
-  </div>
-</div> */
+//     <div class="tdl edit">
+//     <form id="edit" action="/notes/<%= note._id %>?_method=PUT" method="POST">
+//         <input type="text" name="item" value="<%= note.item%>">
+//         <input type="submit" value="Save" />
+//     </form>
+// </div>
