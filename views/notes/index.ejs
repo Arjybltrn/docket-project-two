@@ -1,94 +1,48 @@
 <!DOCTYPE html>
-<html>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">    
-<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<html> 
+
 <head>
-    <meta charset="utf-8">
-    <title>DOCKET</title>
+    <%- include("../partials/head.ejs") %>
 </head>
 
 
 <body>
    <h1>DOCKET</h1>
-
+<div class="tdl-container">
 <ul>
     <% notes.forEach(note => { %>
-   
-    <li><a href="/notes/<%=note._id %>"> <%=note.item %> </a> 
+            <div class="tdl checkbox">
+            <input type="checkbox" class="radio_item_menu"> <span class="item"><%=note.item%></span>
+            </div>
+            <div class="tdl del"> 
+                <form action="/notes/<%=note._id %>?_method=DELETE" method="POST">
+                    <input type="submit" value="DELETE" />
+                </form>
+            </div>    
 
-        <form action="/notes/<%=note.id %>?_method=DELETE" method="POST">
-            <input type="submit" value="DELETE" />
-        </form>
-
-
-        <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-green">Edit task</button>
-
-<div id="id01" class="w3-modal">
-  <div class="w3-modal-content">
-    <div class="w3-container">
-      <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+            <div class="tdl edit">
                 <form id="edit" action="/notes/<%= note._id %>?_method=PUT" method="POST">
-                    <input type="text" name="item" placeholder="Edit task" value="<%= note.item%>">
+                    <input type="text" name="item" value="<%= note.item%>">
                     <input type="submit" value="Save" />
                 </form>
-    </div>
-  </div>
-</div> 
-    
-    </li>
+            </div>
+            <br />
     <%  }) %>
+   
 </ul>
+</div>
+    <div class="tdl-create">
+        <form action="/notes" method="POST">
+            <input type="text" name="item" placeholder="Write new item and hit 'Enter'">
+            <input type="submit" value="+" />
+        </form>
+    </div>
 
-<main>
-    <form action="/notes" method="POST">
-    <input type="text" name="item" placeholder="Write new item and hit 'Enter'">
-    <input type="submit" value="+" />
-    </form>
-</main>
 
 
 
 
 
 </body>
-
-
-<style>
-.bg-modal {
-    width: 100%;
-    height: 100%;
-    opacity: 0.7;
-    background-color: black;
-    position: absolute;
-    top: 0;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    display: none;
-}
-.modal-content {
-    width:500px;
-    height:300px;
-    background-color: white;
-    border-radius: 4px;
-    text-align:center;
-    padding: 20px;
-    position: relative;
-}
-input {
-    width: 50%;
-    display: block;
-    margin: 15px auto;
-}
-.close {
-    position: absolute;
-    top: 0;
-    right:14px;
-    font-size: 25px;
-    transform:rotate(45deg);
-    cursor: pointer;
-}
-</style>
-
 
 </html>

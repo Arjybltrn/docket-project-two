@@ -1,0 +1,33 @@
+h1 {
+    font-size: 80px;
+    text-align: center;
+}
+body {
+    display: grid;
+    justify-content: center;
+    margin: 5px;
+    padding: 10px;
+}
+.tdl-container {
+    display:inline-block;
+    justify-content: center;
+    padding: 10px;
+ 
+}
+.tdl {
+    display: inline-block;
+}
+.tdl-create {
+    display:flex;
+    justify-content: center;
+    width: 100%;
+    margin: inherit;
+}
+.radio_item_menu:checked~.item{
+    font-weight: 300;
+    text-decoration: line-through;
+  }
+  /* input[type="text"] {
+        width: 80%;
+        height: 30px;
+  } */
