@@ -12,18 +12,11 @@ mongoose.connect(process.env.MONGODB_URI);
 notesRouter.use(express.urlencoded({ extended: false }));
 
 // INDEX
-notesRouter.get("/", async(req, res) => {
+notesRouter.get('/', async(req, res) => {
     const allNotes = await Notes.find({})
-    res.render('index.ejs', {notes: allNotes})
+    res.render('notes/index.ejs', {notes: allNotes})
 })
-
-// NEW
-// notesRouter.get('/new' , (req, res) => {
-//     // res.render('notes/new.ejs')
-//     res.send('this is my new ejs page')
-    
-// })
-
+// N 
 // DELETE
 notesRouter.delete('/:id', async (req, res) => {
     await Notes.findByIdAndRemove(req.params.id)
@@ -46,9 +39,11 @@ notesRouter.post('/', (req, res) => {
 // EDIT
 notesRouter.get('/:id', async(req, res) => {
     const foundNote = await Notes.findById(req.params.id).exec()
-    res.render('edit.ejs', {note:foundNote})
+    res.render('notes/edit.ejs', {note:foundNote})
     
 })
+
+// S
 
 
 // EXPORT

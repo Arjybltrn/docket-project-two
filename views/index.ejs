@@ -3,44 +3,14 @@
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 <head>
     <meta charset="utf-8">
-    <title>DOCKET</title>
+    <title>Express Blog</title>
 </head>
-
+<lottie-player src="https://assets1.lottiefiles.com/packages/lf20_OP3TACqpO6.json" background="transparent"  speed="1"  style="width: 300px; height: 300px;" loop autoplay></lottie-player>
 
 <body>
-   <h1>DOCKET</h1>
-
-  <ul>
-    <% notes.forEach(note => { %>
-   
-    <li><a href="/notes/<%=note._id %>"> <%=note.item %> </a> 
-        <br> <%=note.entry%> 
-        <br> <% if (note.completed === true ) { %> Completed <% } else { %> Incomplete <% } %>
-        <form action="/notes/<%=note.id %>?_method=DELETE" method="POST">
-            <input type="submit" value="DELETE" />
-        </form>
-       <button>
-        <a href="/notes/<%=note._id %>/edit" 
-                onclick="window.open('/notes/<%=note._id %>/edit',
-       'newwindow',
-       'width=300, height=250')
-       return false">EDIT</a></button>
-    </li>
-    <%  }) %>
-</ul>
-
-
-
-
-
-<main>
-    <form action="/notes" method="POST">
-    <input type="text" name="item" placeholder="ENTER AN ITEM">
-    <input type="submit" value="+" />
-    </form>
-</main>
-
-
+    <header>
+        <a href="/notes"><h1>Welcome to DOCKET</h1> </a>
+    </header>
 </body>
 
 </html>
