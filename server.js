@@ -3,7 +3,6 @@ const express = require('express')
 const mongoose = require('mongoose')
 const methodOverride = require('method-override')
 const app = express()
-const port = 3000
 require('dotenv').config()
 
 // PORT
@@ -29,11 +28,10 @@ app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 app.use(methodOverride('_method'))
 
+// Routes / Controllers
 
-// 
-app.get('/',(req,res) => {
-    res.render('index.ejs')
-})
+const notesController = require('./controllers/notes')
+app.use('/notes', notesController)
 
 // Listener
     app.listen(PORT, () => console.log('express is listening on:', PORT));
