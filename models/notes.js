@@ -3,7 +3,6 @@ const Schema = mongoose.Schema
 
 const notesSchema = new mongoose.Schema({
     item: { type: String },
-    entry: String, 
     completed: Boolean,
 },
     {   

@@ -37,8 +37,8 @@ notesRouter.post('/', (req, res) => {
     })
 
 // EDIT
-notesRouter.get('/:id', async(req, res) => {
-    const foundNote = await Notes.findById(req.params.id).exec()
+notesRouter.get('/:id/edit', async(req, res) => {
+    const foundNote = await Notes.findById(req.params.id)
     res.render('notes/edit.ejs', {note:foundNote})
     
 })

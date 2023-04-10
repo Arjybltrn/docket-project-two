@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">    
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 <head>
     <meta charset="utf-8">
     <title>DOCKET</title>
@@ -14,20 +15,32 @@
     <% notes.forEach(note => { %>
    
     <li><a href="/notes/<%=note._id %>"> <%=note.item %> </a> 
-        <br> <%=note.entry%> 
         <br> <% if (note.completed === true ) { %> Completed <% } else { %> Incomplete <% } %>
         <form action="/notes/<%=note.id %>?_method=DELETE" method="POST">
             <input type="submit" value="DELETE" />
         </form>
-       <button>
-        <a href="/notes/<%=note._id %>/edit" 
-                onclick="window.open('/notes/<%=note._id %>/edit',
-       'newwindow',
-       'width=300, height=250')
-       return false">EDIT</a></button>
+     
+        <form action="/notes/<%= note._id %>?_method=PUT" method="POST">
+           
+            <input type="text" name="item" placeholder="ENTER AN ITEM" value="<%= note.item%>">
+            <input type="submit" value="Save" />
+        </form>
+    
     </li>
-    <%  }) %>
+  
 </ul>
+
+<button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-green">Open Modal</button>
+
+  <div id="id01" class="w3-modal">
+    <div class="w3-modal-content">
+      <div class="w3-container">
+        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+        <p><%=note.item%> </p>
+      </div>
+    </div>
+  </div>
+  <%  }) %>
 
 
 

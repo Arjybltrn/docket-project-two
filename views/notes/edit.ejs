@@ -7,6 +7,11 @@
     <title>Edit your TDL</title>
 </head>
 <body>
-    this is my edit page
+    <main>
+		<form action="/notes/<%= note._id %>?_method=PUT" method="POST">
+			<input type="text" name="item" value="<%= note.item%>" /><br />
+			<input type="submit" value="Save" />
+		</form>
+	</main>
 </body>
 </html>
