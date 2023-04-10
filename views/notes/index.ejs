@@ -11,49 +11,84 @@
 <body>
    <h1>DOCKET</h1>
 
-  <ul>
+<ul>
     <% notes.forEach(note => { %>
    
     <li><a href="/notes/<%=note._id %>"> <%=note.item %> </a> 
-        <br> <% if (note.completed === true ) { %> Completed <% } else { %> Incomplete <% } %>
+
         <form action="/notes/<%=note.id %>?_method=DELETE" method="POST">
             <input type="submit" value="DELETE" />
         </form>
-     
-        <form action="/notes/<%= note._id %>?_method=PUT" method="POST">
-           
-            <input type="text" name="item" placeholder="ENTER AN ITEM" value="<%= note.item%>">
-            <input type="submit" value="Save" />
-        </form>
-    
-    </li>
-  
-</ul>
 
-<button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-green">Open Modal</button>
 
-  <div id="id01" class="w3-modal">
-    <div class="w3-modal-content">
-      <div class="w3-container">
-        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-        <p><%=note.item%> </p>
-      </div>
+        <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-green">Edit task</button>
+
+<div id="id01" class="w3-modal">
+  <div class="w3-modal-content">
+    <div class="w3-container">
+      <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                <form id="edit" action="/notes/<%= note._id %>?_method=PUT" method="POST">
+                    <input type="text" name="item" placeholder="Edit task" value="<%= note.item%>">
+                    <input type="submit" value="Save" />
+                </form>
     </div>
   </div>
-  <%  }) %>
-
-
-
-
+</div> 
+    
+    </li>
+    <%  }) %>
+</ul>
 
 <main>
     <form action="/notes" method="POST">
-    <input type="text" name="item" placeholder="ENTER AN ITEM">
+    <input type="text" name="item" placeholder="Write new item and hit 'Enter'">
     <input type="submit" value="+" />
     </form>
 </main>
 
 
+
+
+
 </body>
+
+
+<style>
+.bg-modal {
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.modal-content {
+    width:500px;
+    height:300px;
+    background-color: white;
+    border-radius: 4px;
+    text-align:center;
+    padding: 20px;
+    position: relative;
+}
+input {
+    width: 50%;
+    display: block;
+    margin: 15px auto;
+}
+.close {
+    position: absolute;
+    top: 0;
+    right:14px;
+    font-size: 25px;
+    transform:rotate(45deg);
+    cursor: pointer;
+}
+</style>
+
 
 </html>
