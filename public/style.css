@@ -9,11 +9,14 @@ body {
     padding: 10px;
 }
 .tdl-container {
+    background-color: rgb(196,194,185);
+    background-size: cover;
 margin: 0 auto; 
 border: solid 1px black;
 border-radius: 20px;
 padding-right: 40px;
 padding-bottom: 20px;
+width: auto;
 }
 .tdl {
     display: inline-block;
@@ -32,6 +35,13 @@ label {
 .add-btn {
     position:absolute;
 }
+.add-btn:hover {background-color: rgb(95,85,94)}
+.add-btn:active {
+    background-color: rgb(95,85,94);
+    box-shadow: 0 5px #666;
+    transform: translateY(2px);
+  }
+
 .tdl-create > form {
     justify-content: center;
     margin: 0 auto;
@@ -62,5 +72,14 @@ input[type="submit" i] {
         width: 80%;
         height: 30px;
   } */
+
+  ul {
+    font-family: 'Lato', sans-serif;
+    padding-top: 20px;
+    padding-bottom: 5px;
+  }
+  .checkbox {
+    padding-bottom: 4px;
+  }
  
   

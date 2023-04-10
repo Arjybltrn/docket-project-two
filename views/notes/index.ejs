@@ -9,7 +9,7 @@
 <body>
    <h1>docket.</h1>
 <div class="tdl-container">
-<ul>
+    <ul>
     <% notes.forEach(note => { %>
 
             <div class="tdl checkbox">
@@ -31,7 +31,9 @@
                 </form>
             </div>    
 
+
             <br />
+            <hr>
     <%  }) %>
 
 </ul>
@@ -39,7 +41,7 @@
                 <form action="/notes" method="POST">
                     <input class="text-create" type="text" name="item" placeholder="Write new item and hit 'Enter'">
                     <button class="add-btn" type="submit" style="border: 0; background: transparent">
-                    <img src="https://cdn-icons-png.flaticon.com/512/10263/10263114.png" width="30" height="30" alt="submit" />
+                    <img src="https://cdn-icons-png.flaticon.com/512/6040/6040279.png" width="38" height="38" alt="submit" />
                    </button>
                 </form>
             </div>
