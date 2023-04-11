@@ -1,4 +1,6 @@
 h1 {
+    font-family: 'Patrick Hand', cursive;
+    letter-spacing: 6px;
     font-size: 80px;
     text-align: center;
 }
@@ -9,8 +11,7 @@ body {
     padding: 10px;
 }
 .tdl-container {
-    background-color: rgb(196,194,185);
-    background-size: cover;
+background-color: rgb(196,194,185);
 margin: 0 auto; 
 border: solid 1px black;
 border-radius: 20px;
@@ -32,13 +33,13 @@ width: auto;
 label {
     font-size: 20px;
 }
-.add-btn {
+.add-btn, button {
     position:absolute;
 }
-.add-btn:hover {background-color: rgb(95,85,94)}
-.add-btn:active {
+.add-btn:hover, button:hover {background-color: rgb(95,85,94)}
+.add-btn:active, button:active {
     background-color: rgb(95,85,94);
-    box-shadow: 0 5px #666;
+    box-shadow: 0 2px rgb(95,85,94);
     transform: translateY(2px);
   }
 
@@ -54,7 +55,7 @@ button, input[type="checkbox" i]{
 }
 
 input[class="text-create"] {
-    padding: 10px;
+padding: 10px;
 width: 240px;
 border-radius: 10px;
 }
@@ -68,18 +69,91 @@ input[type="submit" i] {
     font-weight: 300;
     text-decoration: line-through;
   }
-  /* input[type="text"] {
-        width: 80%;
-        height: 30px;
-  } */
 
   ul {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Patrick Hand', sans-serif;
+    font-size: 8px;
     padding-top: 20px;
     padding-bottom: 5px;
   }
   .checkbox {
     padding-bottom: 4px;
+    border-radius: 50%;
+  }
+
+  .del, .edit {
+    float:right;
+  }
+  .del {
+    padding-left: 8px;
+  }
+
+  /*  <----------- Modal Window -----------> */ 
+  #text-edit {
+    padding: 10px;
+    width: 240px;
+    border-radius: 10px;
+  }
+
+  .content {
+    text-align: center;
+  }
+
+  .save {
+    position:absolute;
+  }
+
+
+  /*  <----------- Modal -----------> */ 
+  .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 3s ease-in-out;
+  }
+  
+  .popup h2 {
+    margin-top: 0;
+    margin-left: 5px;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+  }
+  .popup .close {
+    position: absolute;
+    top: 2px;
+    right: 25px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  .popup .close:hover {
+    color: #06D85F;
+  }
+  .popup .content {
+    max-height: 30%;
+    overflow: auto;
+    margin-right: 30px;
   }
  
   

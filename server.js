@@ -44,10 +44,3 @@ app.get('/', (req, res) => {
     app.listen(PORT, () => console.log('express is listening on:', PORT));
 
 
-
-//     <div class="tdl edit">
-//     <form id="edit" action="/notes/<%= note._id %>?_method=PUT" method="POST">
-//         <input type="text" name="item" value="<%= note.item%>">
-//         <input type="submit" value="Save" />
-//     </form>
-// </div>
