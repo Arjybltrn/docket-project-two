@@ -29,31 +29,22 @@
                     <a class="button" href="#/notes/<%=note._id%>/edit"><img src="https://cdn-icons-png.flaticon.com/512/2280/2280532.png" width="20" height="20" alt="submit" /></a>
                 </button>
                 </form>
-            </div>    
-
+            </div>   
+            
             <div id="/notes/<%=note._id%>/edit" class="overlay">
                 <div class="popup">
                     <h2>Edit task</h2>
-                    <a class="close" href="#">&times;</a>  
-                    <div class="content"> 
-                        <form id="edit" action="/notes/<%=note._id%>?_method=PUT" method="POST">
-                        <input id="text-edit" type="text" name="item" value="<%=note.item%>">
-                        <button type="submit" style="border: 0; background: transparent">
-                            <img src="data:image/png;base64,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" width="35" height="35" alt="submit" />
-                        </button>
-                        </form>
-                    </div>
+                        <a class="close" href="#">&times;</a>  
+                        <div class="content"> 
+                            <form id="edit" action="/notes/<%=note._id%>?_method=PUT" method="POST">
+                                <input id="text-edit" type="text" name="item" value="<%=note.item%>">
+                                <button class="edit-btn" type="submit" style="border: 0; background: transparent">
+                                <img src="data:image/png;base64,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" width="35" height="35" alt="submit" />
+                                </button>
+                            </form>
+                        </div>
                 </div>
             </div>
-
-
-
-           
-    
-
-
-
-    
 
             <br />
             <hr>
