@@ -39,9 +39,23 @@ label {
 .add-btn:hover, .edit-btn:hover {background-color: rgb(95,85,94)}
 .add-btn:active, .edit-btn:active {
     background-color: rgb(95,85,94);
-    box-shadow: 0 2px rgb(95,85,94);
+    box-shadow: 0 1px rgb(95,85,94);
     transform: translateY(2px);
   }
+
+
+  .main-btn:active {
+    background-color: rgb(252,209,175);
+    box-shadow: 0 1px rgb(252,209,175);
+    transform: translateY(2px);  
+  }
+
+  .main-btn {
+    margin-top: 200px;
+    margin-left: 30%;
+  }
+
+  
 
 .tdl-create > form {
     justify-content: center;
@@ -134,7 +148,7 @@ input[type="submit" i] {
   
   .popup h2 {
     margin-top: 0;
-    margin-left: 5px;
+    margin-left: 20px;
     color: #333;
     font-family: Tahoma, Arial, sans-serif;
   }
@@ -156,7 +170,16 @@ input[type="submit" i] {
     overflow: auto;
     margin-right: 30px;
   }
- 
+ /* CREATED AT */
+  .hidden-timestamp {
+    display: none;
+    font-size: 10px;
+  }
+  .checkbox:hover + .hidden-timestamp {
+    display: inline;
+  }
+
+
   /* Text effect hover for item  */
 
   .item {
@@ -166,8 +189,7 @@ input[type="submit" i] {
   }
   
  .item {
-    background:
-      linear-gradient(
+    background: linear-gradient(
         to right,
         rgb(53,56,57),
         rgb(53,56,57)
@@ -188,5 +210,5 @@ input[type="submit" i] {
     background-size: 0 1px, 100% 1px;
   }
 
-
+  
   

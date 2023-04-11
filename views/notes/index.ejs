@@ -6,16 +6,27 @@
 </head>
 
 
-<body>
-   <h1>docket.</h1>
+<body style="background-color: rgb(188,186,177)" ;>
+    <table>
+        <tr>
+            <td><lottie-player src="https://assets1.lottiefiles.com/packages/lf20_iYvSqSMKZB.json" background="transparent"  speed="1"  style="width: 120px; height: 120px;" loop autoplay></lottie-player></td>  
+            <td><h1>docket.</h1></td>
+        </tr>
+    </table>
+   
 <div class="tdl-container">
     <ul>
     <% notes.forEach(note => { %>
 
             <div class="tdl checkbox">
-            <input type="checkbox" class="radio_item_menu"> <label for="item" class="item"><%=note.item%></label>
+            <input type="checkbox" class="radio_item_menu"> <label for="item" class="item"><%=note.item%> </label> 
+            
             </div>
 
+            <div class="hidden-timestamp">
+                 <%= note.createdAt.toLocaleDateString('en-us',{ weekday:"long", year:"numeric", month:"short", day:"numeric"})  %> 
+              </div>
+            
             <div class="tdl del"> 
                 <form action="/notes/<%=note._id %>?_method=DELETE" method="POST">
                    <button type="submit" style="border: 0; background: transparent">
@@ -48,6 +59,7 @@
 
             <br />
             <hr>
+            
     <%  }) %>
 
 </ul>

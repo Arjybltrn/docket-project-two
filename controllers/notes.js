@@ -11,6 +11,8 @@ mongoose.connect(process.env.MONGODB_URI);
 // Body parser middleware: give us access to req.body
 notesRouter.use(express.urlencoded({ extended: false }));
 
+
+
 // INDEX
 notesRouter.get('/', async(req, res) => {
     const allNotes = await Notes.find({})
@@ -44,6 +46,8 @@ notesRouter.get('/:id/edit', async(req, res) => {
 })
 
 // S
+
+
 
 
 // EXPORT
