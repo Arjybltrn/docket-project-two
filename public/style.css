@@ -31,32 +31,34 @@ width: auto;
     transform: rotate(20deg);
 }
 label {
-    font-size: 20px;
+      font-size: 20px;
 }
 .add-btn, button {
     position:absolute;
 }
-.add-btn:hover, .edit-btn:hover {background-color: rgb(95,85,94)}
+.add-btn:hover, .edit-btn:hover {
+    background-color: rgb(95,85,94)
+}
 .add-btn:active, .edit-btn:active {
     background-color: rgb(95,85,94);
     box-shadow: 0 1px rgb(95,85,94);
     transform: translateY(2px);
-  }
+}
 
 
-  .main-btn:active {
+.main-btn:active {
     background-color: rgb(252,209,175);
     box-shadow: 0 1px rgb(252,209,175);
     transform: translateY(2px);  
-  }
+}
 
-  .main-btn {
-    margin-top: 200px;
-    margin-left: 30%;
-  }
+.main-btn {
+  margin-top: 200px;
+  margin-left: 30%;
+}
 
-  .main-btn:hover {
-    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+/* .main-btn:hover {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
   perspective: 1000px;
@@ -78,7 +80,7 @@ label {
   40%, 60% {
     transform: translate3d(4px, 0, 0);
   }
-}
+} */
 
   
 
