@@ -7,7 +7,7 @@
 ![ejs][ejs-img] ![macmini][mac-mini] 
 
 
-# <span style="font-family:Source Code Pro">**docket.** <span>
+# <span style="font-family: andale mono, monospace">**docket.** <span>
 
 ## **Description**    
 Stay organized and manage your day-to-day.
@@ -50,8 +50,8 @@ Deployed with: Heroku - <a href="https://docket-project-two.herokuapp.com/" targ
 ---
 
 ## **Screenshots**
-<img src="md_imgs/Screenshot%202023-04-12%20at%204.16.07%20PM.png" width="300" height="381" alt="main page screenshot" />
-<img src="md_imgs/Screenshot%202023-04-12%20at%204.16.31%20PM.png" width="300" height="auto" alt="main page screenshot" />
+<img src="md_imgs/Screenshot%202023-04-12%20at%204.16.07%20PM.png" width="300" height="381" alt="main page screenshot" /> <img src="md_imgs/Screenshot%202023-04-12%20at%204.16.31%20PM.png" width="300" height="auto" alt="main page screenshot" />
+
 
 
 <div align="right">
