@@ -19,7 +19,8 @@
     <% notes.forEach(note => { %>
 
             <div class="tdl checkbox">
-            <input type="checkbox" class="radio_item_menu"> <label for="item" class="item"><%=note.item%> </label> 
+            <input type="checkbox" id="<%=note._id%>" class="radio_item_menu"> 
+            <label for="<%=note._id%>" class="item dark-orange-plus"><%=note.item%> </label> 
             
             </div>
 
@@ -42,8 +43,8 @@
                 </form>
             </div>   
             
-            <div id="/notes/<%=note._id%>/edit" class="overlay">
-                <div class="popup">
+            <div id="/notes/<%=note._id%>/edit" class="overlay">  
+                <div class="popup">                  
                     <h2>Edit task</h2>
                         <a class="close" href="#">&times;</a>  
                         <div class="content"> 
@@ -55,6 +56,7 @@
                             </form>
                         </div>
                 </div>
+                
             </div>
 
             <br />
@@ -72,9 +74,5 @@
                 </form>
             </div>
 </div>
-            
-
 </body>
-
-
 </html>
