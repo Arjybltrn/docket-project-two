@@ -10,11 +10,17 @@
 # <span style="font-family: andale mono, monospace">**docket.** <span>
 
 ## **Description**    
-Stay organized and manage your day-to-day.
+### Stay organized and manage your day-to-day.  <br>
+Docket helps you: 
+- Increase productivity
+- Reduce stress
+- Allows for more personal time
+- Provides a sense of accomplishment
 
 ---
 
 <!-- TABLE OF CONTENTS -->
+
 
 <details>
 <summary> Table of contents</summary>
@@ -25,6 +31,8 @@ Stay organized and manage your day-to-day.
 <li><a href="#github-stats">GitHub Stats</a></li>
 <li><a href="#stay-in-touch">Stay in touch</a></li>
 </details>
+
+---
 
 ## **Getting Started**
 

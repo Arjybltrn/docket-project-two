@@ -44,11 +44,7 @@ notesRouter.get('/:id/edit', async(req, res) => {
     res.render('notes/edit.ejs', {note:foundNote})
     
 })
-
 // S
-
-
-
 
 // EXPORT
 module.exports = notesRouter

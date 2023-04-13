@@ -20,7 +20,7 @@
 
             <div class="tdl checkbox">
             <input type="checkbox" id="<%=note._id%>" class="radio_item_menu"> 
-            <label for="<%=note._id%>" class="item dark-orange-plus"><%=note.item%> </label> 
+            <label for="<%=note._id%>" class="item"><%=note.item%> </label> 
             
             </div>
 
@@ -55,15 +55,11 @@
                                 </button>
                             </form>
                         </div>
-                </div>
-                
+                </div>                
             </div>
-
             <br />
-            <hr>
-            
+            <hr>          
     <%  }) %>
-
 </ul>
             <div class="tdl-create">
                 <form action="/notes" method="POST">
