@@ -109,8 +109,8 @@ Deployed with: Heroku - <a href="https://docket-project-two.herokuapp.com/" targ
 [mac-mini]: https://img.shields.io/badge/Apple-Mac%20Mini-lightgrey
 [slack-img]: https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white
 [dotenv-img]: https://img.shields.io/badge/dotenv-%5Ev16.0.3-orange
-[ejs-img]: https://img.shields.io/badge/express-%5E4.18.2-yellow
-[mongoose-img]: https://img.shields.io/badge/mongoose-%5E7.0.3-red
+[ejs-img]: https://img.shields.io/badge/express-%5Ev4.18.2-yellow
+[mongoose-img]: https://img.shields.io/badge/mongoose-%5Ev7.0.3-red
 [expressjs-img]: https://img.shields.io/badge/EJS-404D59?style=for-the-badge
 <!-- URLs -->
 
