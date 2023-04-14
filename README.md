@@ -79,10 +79,6 @@ Deployed with: Heroku - <a href="https://docket-project-two.herokuapp.com/" targ
 </div>
 
 ---
-## **GitHub Stats**
-![githubstats][github-stats]
-
----
 
 ## Stay in touch
 [![LinkedIn][linkedin-img]][linkedin-url]<br>
