@@ -1,6 +1,6 @@
 
 <p align="center">
-  <a href="https://docket-project-two.herokuapp.com/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/9812/9812330.png" width="120" alt="Nest Logo" /></a>
+  <a href="https://docket-project-two.herokuapp.com/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/9812/9812330.png" width="120" alt="Docket Logo" /></a>
 </p>
 
 ![npmv][npm-v] ![mongoose][mongoose-img] ![dotenv][dotenv-img]
